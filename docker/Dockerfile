@@ -12,6 +12,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y git wget build-es
 RUN conda config --add channels r
 RUN conda config --add channels bioconda
 RUN conda config --add channels r
+RUN conda config --set channel_priority flexible
 RUN conda install -y pip ipython python=3.6
 RUN conda install -y -c r r-ggplot2 r-gridextra rpy2
 RUN conda install -y -c conda-forge statsmodels
